@@ -31,7 +31,7 @@ const Home = () => {
         <Box w="95%" m="auto">
           <HomeCarousel />
 
-          {/*<Carousel />*/}
+          <Carousel />
           <Trending />
           {/*<SimpleGridComp/>*/}
 

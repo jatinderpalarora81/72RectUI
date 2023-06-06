@@ -1,12 +1,13 @@
 import * as types from "./actionType";
 import axios from "axios";
 
+let add = 'ec2-43-205-203-67.ap-south-1.compute.amazonaws.com'
 const getMensData = (params) => (dispatch) => {
   dispatch({ type: types.GET_MENS_DATA_R });
 
   return axios
     .get(
-      "http://localhost:8080/products/all",
+      "http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/products/all",
       params
     )
     .then((res) => {
@@ -22,7 +23,7 @@ const getWomensData = (params) => (dispatch) => {
 
   return axios
     .get(
-      "http://localhost:8080/products/all",
+      "http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/products/all",
       params
     )
     .then((res) => {
@@ -35,7 +36,7 @@ const getWomensData = (params) => (dispatch) => {
 const getShoesData = (params) => (dispatch) => {
   dispatch({ type: types.GET_MENS_DATA_R });
   return axios
-    .get("http://localhost:8080/items/all", params)
+    .get("http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/items/all", params)
     .then((res) => {
       dispatch({ type: types.GET_SHOES_DATA_S, payload: res.data });
     })
@@ -48,7 +49,7 @@ const getHomeData = () => (dispatch) => {
   dispatch({ type: types.GET_MENS_DATA_R });
 
   return axios
-    .get("http://localhost:8080/products/all")
+    .get("http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/products/all")
     .then((res) => {
       dispatch({ type: types.GET_HOMEDATA_S, payload: res.data });
     })

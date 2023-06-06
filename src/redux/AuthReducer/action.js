@@ -6,7 +6,7 @@ import * as types from "./actionType";
 const register = (payload, toast) => (dispatch) => {
   dispatch({ type: types.REGISTER_R });
   return axios
-    .post("http://localhost:8080/signup", payload)
+    .post("http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/signup", payload)
     .then((r) => {
       console.log(r.data)
       setToast(toast, "Registered Successful", "success");
@@ -23,7 +23,7 @@ const login = (payload, toast) => (dispatch) => {
   saveLocalData("userInfo", payload.email)
   dispatch({ type: types.LOGIN_R });
   return axios
-    .post("http://localhost:8080/authenticate", payload)
+    .post("http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/authenticate", payload)
     .then((r) => {
       setToast(toast, "Login Successful", "success");
       dispatch({ type: types.LOGIN_S, payload: r.data.token });
@@ -38,7 +38,7 @@ const profile = (payload) => (dispatch) => {
   dispatch({ type: types.PROFILE_R });
   const options = {
     method: "GET",
-    url: `http://localhost:8080/authenticate/${payload.email}`,
+    url: `http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/authenticate/${payload.email}`,
     headers: { Authorization: `Bearer ${payload.token}` },
   };
   return axios(options)

@@ -3,7 +3,7 @@ import axios from "axios";
 const getData = (params) => (dispatch) => {
   dispatch({ type: types.GET_DATA_R });
   return axios
-    .get("http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/products/all", params)
+    .get("https://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/products/all", params)
     .then((res) => {
       dispatch({ type: types.GET_DATA_S, payload: res.data });
     })
@@ -14,7 +14,7 @@ const getData = (params) => (dispatch) => {
 const updateData = (id, payload) => (dispatch) => {
   dispatch({ type: types.UPDATE_DATA_R });
   return axios
-    .patch(`http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/items/${id}`, payload)
+    .patch(`https://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/items/${id}`, payload)
     .then((res) => {
       dispatch({ type: types.UPDATE_DATA_S });
     })
@@ -25,7 +25,7 @@ const updateData = (id, payload) => (dispatch) => {
 const deleteData = (id) => (dispatch) => {
   dispatch({ type: types.DELETE_DATA_R });
   return axios
-    .delete(`http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/${id}`)
+    .delete(`https://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/${id}`)
     .then((res) => {
       dispatch({ type: types.DELETE_DATA_S });
     })

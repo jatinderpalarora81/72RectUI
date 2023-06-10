@@ -3,7 +3,7 @@ import axios from "axios";
 const getData = (params) => (dispatch) => {
   dispatch({ type: types.GET_DATA_R });
   return axios
-    .get("https://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/products/all", params)
+    .get("http://ec2-43-205-203-67.ap-south-1.compute.amazonaws.com:8000/products/all", params)
     .then((res) => {
       dispatch({ type: types.GET_DATA_S, payload: res.data });
     })

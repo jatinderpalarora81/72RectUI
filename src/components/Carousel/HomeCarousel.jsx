@@ -6,7 +6,7 @@ const HomeCarousel = () => {
   return (
       <Box
           position={"relative"}
-          height={["650px","650px","650px"]}
+          height={["300px","400px","800px"]}
           width={"full"}
           overflow={"hidden"}>
     <Carousel

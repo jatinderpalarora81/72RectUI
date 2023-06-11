@@ -1,0 +1,1 @@
+export const restURL= 'https://rest.72closet.com'

@@ -31,7 +31,7 @@ const AdminNavbar = () => {
               as={Button}
               rightIcon={<AiFillCaretDown />}
             >
-              Naresh Rajput
+              Jatin
             </MenuButton>
             <MenuList>
               <MenuItem as={"Button"} onClick={logoutHandler}>

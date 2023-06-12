@@ -14,9 +14,7 @@ const MyAccount = () => {
         bgImage={"linear-gradient(skyblue,royalblue)"}
       >
         <Heading w={"80%"} m={"auto"} className="heading">
-          Hi! {profileData.length !== 0 ? profileData.name : "User"}! Thank you
-          for visiting my website! My name is Naresh Rajput and I hope you like
-          my Website.
+          Hi! {profileData.length !== 0 ? profileData.name : "User"}!
         </Heading>
         <Flex
           alignItems={"center"}
@@ -28,27 +26,27 @@ const MyAccount = () => {
         >
           <Heading className="heading"> Follow Me : </Heading>
           <Flex justifyContent={"space-evenly"}>
-            <Tooltip label="Follow Me On Github" color="white">
-              <Box>
-                <Text>
-                  <a href="https://github.com/nmewada01" alt={"nmewada01"}>
-                    <AiFillGithub fontSize={"45px"} />
-                  </a>
-                </Text>
-              </Box>
-            </Tooltip>
-            <Tooltip label="Follow Me On Linkedin" color="white">
-              <Box>
-                <Text>
-                  <a
-                    href="https://www.linkedin.com/in/naresh-rajput/"
-                    alt={"Naresh Rajput"}
-                  >
-                    <AiFillLinkedin fontSize={"50px"} />
-                  </a>
-                </Text>
-              </Box>
-            </Tooltip>
+            {/*<Tooltip label="Follow Me On Github" color="white">*/}
+            {/*  <Box>*/}
+            {/*    <Text>*/}
+            {/*      <a href="https://github.com/nmewada01" alt={"nmewada01"}>*/}
+            {/*        <AiFillGithub fontSize={"45px"} />*/}
+            {/*      </a>*/}
+            {/*    </Text>*/}
+            {/*  </Box>*/}
+            {/*</Tooltip>*/}
+            {/*<Tooltip label="Follow Me On Linkedin" color="white">*/}
+            {/*  <Box>*/}
+            {/*    <Text>*/}
+            {/*      <a*/}
+            {/*        href="https://www.linkedin.com/in/naresh-rajput/"*/}
+            {/*        alt={"Naresh Rajput"}*/}
+            {/*      >*/}
+            {/*        <AiFillLinkedin fontSize={"50px"} />*/}
+            {/*      </a>*/}
+            {/*    </Text>*/}
+            {/*  </Box>*/}
+            {/*</Tooltip>*/}
           </Flex>
         </Flex>
         <Text fontSize={"30px"} color="white">

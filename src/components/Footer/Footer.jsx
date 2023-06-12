@@ -35,10 +35,12 @@ const Footer = () => {
         >
           <Box as={Flex} flexDirection="column">
             <Heading>Product</Heading>
-            <Text as={Link} to="/allproducts?gender=MEN">Mens Collection</Text>
-            <Text as={Link} to="/allproducts?gender=WOMEN">Womens Collection</Text>
-            <Text as={Link} to="/allproducts?category=shoes" >Shoes Collection</Text>
-            <Text as={Link} to="/allproducts?category=clothes">Clothes Collection</Text>
+            {/*<Text as={Link} to="/allproducts?gender=MEN">Lehenga Collection</Text>*/}
+            <Text>Lehenga Collection</Text>
+            {/*<Text as={Link} to="/allproducts?gender=WOMEN">Gown Collection</Text>*/}
+            <Text>Gown Collection</Text>
+            {/*<Text as={Link} to="/allproducts?category=shoes" >Shoes Collection</Text>*/}
+            {/*<Text as={Link} to="/allproducts?category=clothes">Clothes Collection</Text>*/}
           </Box>
 
           {isSmallerThan ? (
@@ -61,29 +63,29 @@ const Footer = () => {
               <Text>Company Apps</Text>
             </Box>
           ) : null}
-          <Box mt="1rem" display={"flex"} gap="1rem" justifyContent={"center"}>
-            <a
-              href="https://www.linkedin.com/in/naresh-rajput/"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              <Icon w={9} h={9} my="1rem" as={BsLinkedin} />
-            </a>
-            <a
-              href="https://github.com/nmewada01"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              <Icon w={9} h={9} my="1rem" as={BsGithub} />
-            </a>
-            <a
-              href="https://nmewada01.github.io/portfolio/"
-              target={"_blank"}
-              rel="noreferrer"
-            >
-              <Avatar w={10} h={10} my="1rem" bg="white" src={portfolio} />
-            </a>
-          </Box>
+          {/*<Box mt="1rem" display={"flex"} gap="1rem" justifyContent={"center"}>*/}
+          {/*  <a*/}
+          {/*    href="https://www.linkedin.com/in/naresh-rajput/"*/}
+          {/*    target={"_blank"}*/}
+          {/*    rel="noreferrer"*/}
+          {/*  >*/}
+          {/*    <Icon w={9} h={9} my="1rem" as={BsLinkedin} />*/}
+          {/*  </a>*/}
+          {/*  <a*/}
+          {/*    href="https://github.com/nmewada01"*/}
+          {/*    target={"_blank"}*/}
+          {/*    rel="noreferrer"*/}
+          {/*  >*/}
+          {/*    <Icon w={9} h={9} my="1rem" as={BsGithub} />*/}
+          {/*  </a>*/}
+          {/*  <a*/}
+          {/*    href="https://nmewada01.github.io/portfolio/"*/}
+          {/*    target={"_blank"}*/}
+          {/*    rel="noreferrer"*/}
+          {/*  >*/}
+          {/*    <Avatar w={10} h={10} my="1rem" bg="white" src={portfolio} />*/}
+          {/*  </a>*/}
+          {/*</Box>*/}
         </Flex>
       </Box>
     </div>

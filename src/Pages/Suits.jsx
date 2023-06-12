@@ -6,9 +6,9 @@ import Loading from "../components/Loading/Loading";
 import Navbar from "../components/Navbar/Navbar";
 import ProductDis from "../components/ProductsDisplay/ProductDis";
 import FilterData from "../Filter/Filters/FilterData";
-import { getWomensData } from "../redux/PagesReducer/action";
+import { getSuitsData } from "../redux/PagesReducer/action";
 
-const AllwomensD = () => {
+const AllsuitsD = () => {
   const dispatch = useDispatch();
   const womensD = useSelector((store) => store.pagesReducer.womensD);
   const loading = useSelector((store) => store.pagesReducer.isLoading);
@@ -29,7 +29,7 @@ const AllwomensD = () => {
           _order: sortBy,
         },
       };
-      dispatch(getWomensData(queryParams));
+      dispatch(getSuitsData(queryParams));
     }
   }, [dispatch, location.search, womensD?.length, searchParams]);
   return (
@@ -62,4 +62,4 @@ const AllwomensD = () => {
   );
 };
 
-export default AllwomensD;
+export default AllsuitsD;

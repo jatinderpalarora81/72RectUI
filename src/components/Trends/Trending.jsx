@@ -2,7 +2,7 @@ import {Box, Heading, VStack} from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Slider from "react-slick";
-import { getMensData } from "../../redux/PagesReducer/action";
+import { getLehengaData } from "../../redux/PagesReducer/action";
 import { HomeDis } from "../HomeDisplay/HomeDisplay";
 const Trending = () => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ const Trending = () => {
 
   useEffect(() => {
     if (mensD?.length === 0) {
-      dispatch(getMensData());
+      dispatch(getLehengaData());
     }
   }, [dispatch, mensD?.length]);
 

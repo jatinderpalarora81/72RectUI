@@ -49,11 +49,11 @@ export default function SideMenu() {
                   Lehengas
                 </Text>
               </Link>
-              <Link to="/suits">
-                <Text my="4" mx="2">
-                  Suits
-                </Text>
-              </Link>
+              {/*<Link to="/suits">*/}
+              {/*  <Text my="4" mx="2">*/}
+              {/*    Suits*/}
+              {/*  </Text>*/}
+              {/*</Link>*/}
               <Link to="/gowns">
                 <Text my="4" mx="2">
                   Gowns

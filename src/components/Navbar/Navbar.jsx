@@ -127,18 +127,18 @@ const Navbar = () => {
                 Lehengas
               </Text>
             </NavLink>
-            <NavLink
-              style={({ isActive }) => (isActive ? activeStyle : baseStyle)}
-              to="/suits"
-            >
-              <Text
-                color={colorMode === "dark" ? "white" : "black"}
-                my="4"
-                mx="2"
-              >
-                Suits
-              </Text>
-            </NavLink>
+            {/*<NavLink*/}
+            {/*  style={({ isActive }) => (isActive ? activeStyle : baseStyle)}*/}
+            {/*  to="/suits"*/}
+            {/*>*/}
+            {/*  <Text*/}
+            {/*    color={colorMode === "dark" ? "white" : "black"}*/}
+            {/*    my="4"*/}
+            {/*    mx="2"*/}
+            {/*  >*/}
+            {/*    Suits*/}
+            {/*  </Text>*/}
+            {/*</NavLink>*/}
             <NavLink
               style={({ isActive }) => (isActive ? activeStyle : baseStyle)}
               to="/gowns"

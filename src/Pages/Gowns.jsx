@@ -2,14 +2,14 @@ import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FilterData from "../Filter/Filters/FilterData";
-import { getShoesData } from "../redux/PagesReducer/action";
+import { getGownsData } from "../redux/PagesReducer/action";
 import { Flex, Box, Spacer, Grid, useMediaQuery } from "@chakra-ui/react";
 import ProductDis from "../components/ProductsDisplay/ProductDis";
 import Loading from "../components/Loading/Loading";
 import { useLocation, useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 
-const AllshoesD = () => {
+const AllgownsD = () => {
   const dispatch = useDispatch();
   const shoesD = useSelector((store) => store.pagesReducer.shoesD);
   const loading = useSelector((store) => store.pagesReducer.isLoading);
@@ -32,7 +32,7 @@ const AllshoesD = () => {
           _order: sortBy,
         },
       };
-      dispatch(getShoesData(queryParams));
+      dispatch(getGownsData(queryParams));
     }
   }, [dispatch, location.search, shoesD?.length, searchParams]);
   return (
@@ -65,4 +65,4 @@ const AllshoesD = () => {
   );
 };
 
-export default AllshoesD;
+export default AllgownsD;

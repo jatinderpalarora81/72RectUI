@@ -2,14 +2,14 @@ import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FilterData from "../Filter/Filters/FilterData";
-import { getMensData } from "../redux/PagesReducer/action";
+import { getLehengaData } from "../redux/PagesReducer/action";
 import { Flex, Box, Spacer, Grid, useMediaQuery } from "@chakra-ui/react";
 import ProductDis from "../components/ProductsDisplay/ProductDis";
 import Loading from "../components/Loading/Loading";
 import { useLocation, useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 
-const AllmensD = () => {
+const AllLehengaD = () => {
   const dispatch = useDispatch();
   const mensD = useSelector((store) => store.pagesReducer.mensD);
   const loading = useSelector((store) => store.pagesReducer.isLoading);
@@ -30,7 +30,7 @@ const AllmensD = () => {
           _order: sortBy,
         },
       };
-      dispatch(getMensData(queryParams));
+      dispatch(getLehengaData(queryParams));
     }
   }, [dispatch, location.search, mensD?.length, searchParams]);
   return (
@@ -63,4 +63,4 @@ const AllmensD = () => {
   );
 };
 
-export default AllmensD;
+export default AllLehengaD;

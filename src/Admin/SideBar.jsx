@@ -51,9 +51,9 @@ export default function SideBar() {
               <Box>
                 <Link to="/lehengas">Lehengas</Link>
               </Box>
-              <Box>
-                <Link to="/suits">Suits</Link>
-              </Box>
+              {/*<Box>*/}
+              {/*  <Link to="/suits">Suits</Link>*/}
+              {/*</Box>*/}
               <Box>
                 <Link to="/gowns">Gowns</Link>
               </Box>

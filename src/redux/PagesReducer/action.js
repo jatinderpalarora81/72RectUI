@@ -2,8 +2,8 @@ import * as types from "./actionType";
 import axios from "axios";
 import {restURL} from "../../common";
 
-const getMensData = (params) => (dispatch) => {
-  dispatch({ type: types.GET_MENS_DATA_R });
+const getLehengaData = (params) => (dispatch) => {
+  dispatch({ type: types.GET_LEHENGA_DATA_R });
 
   return axios
     .get(
@@ -11,15 +11,15 @@ const getMensData = (params) => (dispatch) => {
       params
     )
     .then((res) => {
-      dispatch({ type: types.GET_MENS_DATA_S, payload: res.data });
+      dispatch({ type: types.GET_LEHENGA_DATA_S, payload: res.data });
     })
     .then((err) => {
-      dispatch({ type: types.GET_MENS_DATA_F });
+      dispatch({ type: types.GET_LEHENGA_DATA_F });
     });
 };
 
-const getWomensData = (params) => (dispatch) => {
-  dispatch({ type: types.GET_MENS_DATA_R });
+const getSuitsData = (params) => (dispatch) => {
+  dispatch({ type: types.GET_LEHENGA_DATA_R });
 
   return axios
     .get(
@@ -27,26 +27,26 @@ const getWomensData = (params) => (dispatch) => {
       params
     )
     .then((res) => {
-      dispatch({ type: types.GET_WOMENS_DATA_S, payload: res.data });
+      dispatch({ type: types.GET_SUITS_DATA_S, payload: res.data });
     })
     .then((err) => {
-      dispatch({ type: types.GET_MENS_DATA_F });
+      dispatch({ type: types.GET_LEHENGA_DATA_F });
     });
 };
-const getShoesData = (params) => (dispatch) => {
-  dispatch({ type: types.GET_MENS_DATA_R });
+const getGownsData = (params) => (dispatch) => {
+  dispatch({ type: types.GET_LEHENGA_DATA_R });
   return axios
-    .get(restURL+"/items/all", params)
+    .get(restURL+"/products/all", params)
     .then((res) => {
-      dispatch({ type: types.GET_SHOES_DATA_S, payload: res.data });
+      dispatch({ type: types.GET_GOWN_DATA_S, payload: res.data });
     })
     .then((err) => {
-      dispatch({ type: types.GET_MENS_DATA_F });
+      dispatch({ type: types.GET_LEHENGA_DATA_F });
     });
 };
 
 const getHomeData = () => (dispatch) => {
-  dispatch({ type: types.GET_MENS_DATA_R });
+  dispatch({ type: types.GET_LEHENGA_DATA_R });
 
   return axios
     .get(restURL+"/products/all")
@@ -54,8 +54,8 @@ const getHomeData = () => (dispatch) => {
       dispatch({ type: types.GET_HOMEDATA_S, payload: res.data });
     })
     .then((err) => {
-      dispatch({ type: types.GET_MENS_DATA_F });
+      dispatch({ type: types.GET_LEHENGA_DATA_F });
     });
 };
 
-export { getWomensData, getMensData, getShoesData, getHomeData };
+export { getSuitsData, getLehengaData, getGownsData, getHomeData };

@@ -12,13 +12,13 @@ const init = {
 const pagesReducer = (state = init, action) => {
   const { type, payload } = action;
   switch (type) {
-    case data.GET_MENS_DATA_R: {
+    case data.GET_LEHENGA_DATA_R: {
       return {
         ...state,
         isLoading: true,
       };
     }
-    case data.GET_MENS_DATA_S: {
+    case data.GET_LEHENGA_DATA_S: {
       return {
         ...state,
         isLoading: false,
@@ -32,21 +32,21 @@ const pagesReducer = (state = init, action) => {
         homeD: payload,
       };
     }
-    case data.GET_WOMENS_DATA_S: {
+    case data.GET_SUITS_DATA_S: {
       return {
         ...state,
         isLoading: false,
         womensD: payload,
       };
     }
-    case data.GET_SHOES_DATA_S: {
+    case data.GET_GOWN_DATA_S: {
       return {
         ...state,
         isLoading: false,
         shoesD: payload,
       };
     }
-    case data.GET_MENS_DATA_F: {
+    case data.GET_LEHENGA_DATA_F: {
       return {
         ...state,
         isError: true,

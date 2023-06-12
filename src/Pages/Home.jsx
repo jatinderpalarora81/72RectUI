@@ -17,12 +17,18 @@ import Navbar from "../components/Navbar/Navbar"
 import SimpleGridComp from "../components/SimpleGridComp/SimpleGridComp";
 import HomeCarousel from "../../src/components/Carousel/HomeCarousel";
 import React from "react";
+import SEO from "./SEO";
 
 const Home = () => {
   const loading = useSelector((store) => store.pagesReducer.isLoading);
   const navigate = useNavigate();
   return (
     <div>
+      <SEO title='72 Closet'
+        description='Rent Rock Return'
+        name='Saaj Designs'
+        type='Rental' />
+
       <Navbar/> <br/>
       {loading ? (
         <Loading />

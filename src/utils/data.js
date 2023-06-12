@@ -1,6 +1,6 @@
-import men from "../img/men.jpg";
-import women from "../img/women.jpg";
-import shoe from "../img/shoe.jpg";
+// import men from "../img/men.jpg";
+// import women from "../img/women.jpg";
+// import shoe from "../img/shoe.jpg";
 
 export const imagesData = [
   // {

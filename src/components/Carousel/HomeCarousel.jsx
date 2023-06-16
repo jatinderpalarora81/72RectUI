@@ -6,7 +6,7 @@ const HomeCarousel = () => {
   return (
       <Box
           position={"relative"}
-          height={["300px","400px","800px"]}
+          height={["375px","475px","700px"]}
           width={"full"}
           overflow={"hidden"}>
     <Carousel
@@ -28,7 +28,7 @@ const HomeCarousel = () => {
       <Box>
         <Image
           w="100%"
-          src="https://dv5l4gwa2f8od.cloudfront.net/HomeSlider5.jpg"
+          src="https://saajdesigns.com/wp-content/uploads/2020/11/j2.jpg"
         />
       </Box>
         <Box>
@@ -40,7 +40,7 @@ const HomeCarousel = () => {
       <Box>
         <Image
           w="100%"
-          src="https://dv5l4gwa2f8od.cloudfront.net/HomeSlider5.jpg"
+          src="https://saajdesigns.com/wp-content/uploads/2020/11/i3.jpg"
         />
       </Box>
 

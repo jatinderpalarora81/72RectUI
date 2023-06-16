@@ -1,9 +1,9 @@
 import * as data from "./actionType";
 
 const init = {
-  mensD: [],
-  womensD: [],
-  shoesD: [],
+  lehengasD: [],
+  suitsD: [],
+  gownsD: [],
   homeD: [],
   isLoading: false,
   isError: false,
@@ -22,7 +22,7 @@ const pagesReducer = (state = init, action) => {
       return {
         ...state,
         isLoading: false,
-        mensD: payload,
+        lehengasD: payload,
       };
     }
     case data.GET_HOMEDATA_S: {
@@ -36,14 +36,14 @@ const pagesReducer = (state = init, action) => {
       return {
         ...state,
         isLoading: false,
-        womensD: payload,
+        suitsD: payload,
       };
     }
     case data.GET_GOWN_DATA_S: {
       return {
         ...state,
         isLoading: false,
-        shoesD: payload,
+        gownsD: payload,
       };
     }
     case data.GET_LEHENGA_DATA_F: {

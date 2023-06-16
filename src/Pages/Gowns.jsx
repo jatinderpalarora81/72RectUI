@@ -11,7 +11,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 const AllgownsD = () => {
   const dispatch = useDispatch();
-  const shoesD = useSelector((store) => store.pagesReducer.shoesD);
+  const gownsD = useSelector((store) => store.pagesReducer.gownsD);
   const loading = useSelector((store) => store.pagesReducer.isLoading);
 
   const [isLargerThan] = useMediaQuery("(min-width: 768px)");
@@ -19,7 +19,7 @@ const AllgownsD = () => {
   const [searchParams] = useSearchParams();
   const location = useLocation();
   useEffect(() => {
-    if (location || shoesD?.length === 0) {
+    if (location || gownsD?.length === 0) {
       const sortBy = searchParams.get("sortBy");
 
       const queryParams = {
@@ -34,7 +34,7 @@ const AllgownsD = () => {
       };
       dispatch(getGownsData(queryParams));
     }
-  }, [dispatch, location.search, shoesD?.length, searchParams]);
+  }, [dispatch, location.search, gownsD?.length, searchParams]);
   return (
     <div className="AllsportsD">
       <Navbar /> <br />
@@ -53,8 +53,8 @@ const AllgownsD = () => {
               }
               gap={"5px"}
             >
-              {shoesD?.length > 0 &&
-                shoesD.map((item) => {
+              {gownsD?.length > 0 &&
+                  gownsD.map((item) => {
                   return <ProductDis key={item.key} item={item} />;
                 })}
             </Grid>

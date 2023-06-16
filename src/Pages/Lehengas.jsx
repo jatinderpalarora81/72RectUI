@@ -11,13 +11,13 @@ import Navbar from "../components/Navbar/Navbar";
 
 const AllLehengaD = () => {
   const dispatch = useDispatch();
-  const mensD = useSelector((store) => store.pagesReducer.mensD);
+  const lehengasD = useSelector((store) => store.pagesReducer.lehengasD);
   const loading = useSelector((store) => store.pagesReducer.isLoading);
   const [isLargerThan] = useMediaQuery("(min-width: 768px)");
   const [searchParams] = useSearchParams();
   const location = useLocation();
   useEffect(() => {
-    if (location || mensD?.length === 0) {
+    if (location || lehengasD?.length === 0) {
       const sortBy = searchParams.get("sortBy");
 
       const queryParams = {
@@ -32,7 +32,7 @@ const AllLehengaD = () => {
       };
       dispatch(getLehengaData(queryParams));
     }
-  }, [dispatch, location.search, mensD?.length, searchParams]);
+  }, [dispatch, location.search, lehengasD?.length, searchParams]);
   return (
     <div className="AllmensD">
       <Navbar /> <br />
@@ -51,8 +51,8 @@ const AllLehengaD = () => {
               }
               gap={"5px"}
             >
-              {mensD?.length > 0 &&
-                mensD.map((item) => {
+              {lehengasD?.length > 0 &&
+                  lehengasD.map((item) => {
                   return <ProductDis key={item.key} item={item} />;
                 })}
             </Grid>

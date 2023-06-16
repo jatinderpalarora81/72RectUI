@@ -6,61 +6,13 @@ import { getLehengaData } from "../../redux/PagesReducer/action";
 import { HomeDis } from "../HomeDisplay/HomeDisplay";
 const Trending = () => {
   const dispatch = useDispatch();
-  const mensD = useSelector((store) => store.pagesReducer.mensD);
+  const lehengasD = useSelector((store) => store.pagesReducer.lehengasD);
 
   useEffect(() => {
-    if (mensD?.length === 0) {
+    if (lehengasD?.length === 0) {
       dispatch(getLehengaData());
     }
-  }, [dispatch, mensD?.length]);
-
-  const settings1= {
-    dots: true,
-    arrows: false,
-    fade: true,
-    infinite: true,
-    autoplay: true,
-    speed: 500,
-    autoplaySpeed: 2000,
-    slidesToShow: 3,
-    initialSlide: 0,
-    slidesToScroll: 3
-  };
-
-  var settings2 = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  }, [dispatch, lehengasD?.length]);
 
   var settings = {
     dots: true,
@@ -100,10 +52,10 @@ const Trending = () => {
   return (
     <div>
       <Box border="1px solid beige">
-        <Heading align={"left"}> TOP PICS FOR YOU</Heading>
+        <Heading align={"left"}> TOP PICKS FOR YOU</Heading>
         <Slider {...settings}>
-          {mensD?.length > 0 &&
-            mensD.map((item) => {
+          {lehengasD?.length > 0 &&
+              lehengasD.map((item) => {
               return <HomeDis key={item.key} item={item} />;
             })}
         </Slider>

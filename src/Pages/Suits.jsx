@@ -10,13 +10,13 @@ import { getSuitsData } from "../redux/PagesReducer/action";
 
 const AllsuitsD = () => {
   const dispatch = useDispatch();
-  const womensD = useSelector((store) => store.pagesReducer.womensD);
+  const suitsD = useSelector((store) => store.pagesReducer.suitsD);
   const loading = useSelector((store) => store.pagesReducer.isLoading);
   const [isLargerThan] = useMediaQuery("(min-width: 768px)");
   const [searchParams] = useSearchParams();
   const location = useLocation();
   useEffect(() => {
-    if (location || womensD?.length === 0) {
+    if (location || suitsD?.length === 0) {
       const sortBy = searchParams.get("sortBy");
 
       const queryParams = {
@@ -31,7 +31,7 @@ const AllsuitsD = () => {
       };
       dispatch(getSuitsData(queryParams));
     }
-  }, [dispatch, location.search, womensD?.length, searchParams]);
+  }, [dispatch, location.search, suitsD?.length, searchParams]);
   return (
     <div className="AllwomensD">
       <Navbar /> <br />

@@ -50,8 +50,8 @@ const AllsuitsD = () => {
               }
               gap={"5px"}
             >
-              {womensD?.length > 0 &&
-                womensD.map((item) => {
+              {suitsD?.length > 0 &&
+                  suitsD.map((item) => {
                   return <ProductDis key={item.key} item={item} />;
                 })}
             </Grid>

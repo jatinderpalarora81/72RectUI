@@ -22,7 +22,7 @@ function HomeBanner(props) {
               <div className="col">
                 <div className="main_slider_content" data-aos="fade-right">
                   <h6>Spring / Summer Collection 2023</h6>
-                  <h1>Get up to 30% Off New Arrivals</h1>
+                  <h1>Fashion for all occasions</h1>
                   <div className="red_button shop_now_button">
                     <a href="allproducts">Book now</a>
                   </div>
@@ -43,8 +43,8 @@ function HomeBanner(props) {
             <div className="row align-items-center fill_height">
               <div className="col">
                 <div className="main_slider_content" data-aos="fade-right">
-                  <h6>Spring / Summer Collection 2023</h6>
-                  <h1>Get up to 30% Off New Arrivals</h1>
+                  <h6>Rent the dress, live the dream.</h6>
+                  <h1>Constant fashion, no commitment</h1>
                   <div className="red_button shop_now_button">
                     <a href="allproducts">Book now</a>
                   </div>
@@ -65,8 +65,8 @@ function HomeBanner(props) {
             <div className="row align-items-center fill_height">
               <div className="col">
                 <div className="main_slider_content" data-aos="fade-right">
-                  <h6>Spring / Summer Collection 2023</h6>
-                  <h1>Get up to 30% Off New Arrivals</h1>
+                  <h6>Fashion for any occasion</h6>
+                  <h1>Rock the red carpet</h1>
                   <div className="red_button shop_now_button">
                     <a href="allproducts">Book now</a>
                   </div>

@@ -15,11 +15,13 @@ import Checkout from "../Pages/Checkout";
 import Authentication from "../PrivateRoute/Authentication";
 import MyAccount from "../Pages/MyAccount";
 import AdminPage from "../Admin/AdminPage";
+import NewHomePage from "../Pages/NewHomePage";
+import HomeLook from "../Pages/Home/HomeLook";
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomeLook />} />
         <Route path="/allproducts" element={<AllProducts />} />
         <Route path="/lehengas" element={<Lehengas />} />
         <Route path="/suits" element={<Suits />} />
